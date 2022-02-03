@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
     fun add() {
         val fragment = MainFragment.newInstance()
         supportFragmentManager.beginTransaction()
-            .add(R.id.container, fragment, "${fragment::class}${counter}")
+            .replace(R.id.container, fragment, "${fragment::class}${counter}")
             .addToBackStack("${fragment::class}${counter}:add")
             .commit()
     }
